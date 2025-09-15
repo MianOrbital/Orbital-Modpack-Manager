@@ -5,7 +5,7 @@ author        = "MianOrbital"
 description   = "A simple manager/launcher for CP"
 license       = "CC0-1.0"
 srcDir        = "src"
-bin           = @["Chief_Launcher"]
+bin           = @["Orbital_Modpack_Manager"]
 
 
 # Dependencies
