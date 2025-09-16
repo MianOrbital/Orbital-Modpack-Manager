@@ -6,6 +6,9 @@ This is a silly little project to learn about http clients and some other langua
 
 If you are trying to use this without knowning "MastersChief"... this probably isnt something you want to do.
 
+To install:
+Just download the .exe in the files above
+
 There is like a 95% chance this doesn't actually work...
 it is also just an installer and a janky one at that...
 in the three partial tests I did:
