@@ -1,14 +1,16 @@
-#This established the modpacks directory system and unpacks the modpack
+#This created the main manager directory and the Modpacks folder
 
+#Standard Library
 import std/os
+#local 
 import globalValues
 
 proc dirCreator() =
-  let userHomeDir = getHomeDir()
-  let userLocalDir = joinPath(userHomeDir, "AppData", "Local")
-  setcurrentDir(userLocalDir)
-
-  createDir(parentLauncherDir)
+  setcurrentDir(userLocalAppDir)
+  createDir(mainDirName)
+  setcurrentDir(mainDir)
+  createDir("Modpacks")
+  echo "Directory Manager Finished!"
 
 proc packDirsManager*() =
   dirCreator()
