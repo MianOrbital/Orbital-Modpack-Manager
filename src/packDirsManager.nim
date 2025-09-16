@@ -3,9 +3,6 @@
 import std/os
 import globalValues
 
-proc downloadHandler() = 
-  echo "tester"
-
 proc dirCreator() =
   let userHomeDir = getHomeDir()
   let userLocalDir = joinPath(userHomeDir, "AppData", "Local")
@@ -14,6 +11,5 @@ proc dirCreator() =
   createDir(parentLauncherDir)
 
 proc packDirsManager*() =
-  downloadHandler()
   dirCreator()
 packDirsManager()

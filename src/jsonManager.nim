@@ -3,11 +3,9 @@
 
 import std/os
 import std/json
+import globalValues
 
 proc directoryMapper() =
-  let userHomeDir = getHomeDir()
-  let minecraftDir = joinPath(userHomeDir, "AppData", "Roaming", ".minecraft")
-  
   try:
     setCurrentDir(minecraftDir)
   except OSError:
@@ -17,12 +15,12 @@ proc directoryMapper() =
 proc jsonEditor() =
   var launcherProfileNode = parsefile("launcher_profiles.json")
   let modpackNode = %*  
-    {"created": "DATE-PLACEHOLDER",
-    "icon": "ICON-PLACEHOLDER",
-    "lasUsed": "LAST-PLACEHOLDER",
+    {"icon": "Enchanting_Table",
+    "gamedir": mainDir / "Modpacks/Infinite Hyperdeath 3",
     "name": "Infinite Hyperdeath 3",
-    "lastVersionID": "Version 1.1",
+    "lastVersionID": "forge-47.4.0",
     "type": "custom"}
+  echo pretty(modpackNode)
   
   launcherProfileNode["profiles"]["Infinite Hyperdeath 3"] =modpackNode
   writeFile("launcher_profiles.json", pretty(launcherProfileNode))
