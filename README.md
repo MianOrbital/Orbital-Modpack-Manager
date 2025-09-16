@@ -1,24 +1,24 @@
 Written in September of 2025 by Mian using Nim
 
-Version 0.0.1 - WOOT!
+Version 0.2
+  The functional edition
 
-This is a silly little project to learn about http clients and some other language stuff
+Installation: 
+  Simply download the "Orbital Modpack Manager.exe" file from the above directory.
+  This file is optimized for amd64 (It may not work at all on other archetecture, recompiling using a different argument should allow that)
+  It currently does not run on linux or macOS (Only whitespace conflicts, brave users can fix this or wait for ~v0.6 or so)
 
-If you are trying to use this without knowning "MastersChief"... this probably isnt something you want to do.
-
-There is like a 95% chance this doesn't actually work...
-it is also just an installer and a janky one at that...
-in the three partial tests I did:
-test 1 had no unicode
-test 2 crashed on launch
-test 3 had major memory leaks
-I changed nothing between these tests and did nothing that should impact that.
-
+Files
+  globalValues - This just assigns some values (mainly paths) used accross the program. This will probably become an .ini in the future.
+  jsonManager - This handles the JSON parsing and updating. This needs optimized
+  modpackDownloader - This downloads, extracts, and installs, the modpack and its framework. This needs trimmed.
+  packDirsManager - This makes some of the directory folders. This needs expanded
+  Orbital_Modpack_Manager - This calls the other folders and the user CLI (Which doesnt work right now)
 
 Todo
--more global vars
---user dir config
--json saftey
--CLI
--Kiss my wife goodnight
--check imports, OS to paths/file when able
+  Assign global vars
+  More documentation
+  Make JSON editing safe
+  Fix CLI
+  Kiss my wife goodmorning
+  Optimize imports

@@ -1,23 +1,31 @@
 #Sic Semper Tyranus
 
 #Imports the other .nim files
-import jsonManager
+import globalValues
 import packDirsManager
 import modpackDownloader
+import jsonManager
 
-proc main() =
+proc install() =
   packDirsManager()
   modpackDownloader()
   modpackJsonManager()
 
-proc theBigInstall() =
-  echo "To install enter 1 /n To launch enter 2 /n WOE UPON THEE WHO ATTEMPT TO INSTALL THIS TWICE /n I also did not test this as a full program!"
+proc run() =
+  echo "WIP - launch via Mojang Launcher (set ram!)"
+
+proc main() =
+  echo:
+    """To install enter 1
+    To launch enter 2
+    WOE UPON THEE WHO ATTEMPT TO INSTALL THIS TWICE
+    I also did not test this as a full program!"""
   let userInput = readLine(stdin)
   if userInput == "1":
-    main()
+    install()
   elif userInput == "2":
-    echo "I LIED IT DOESNT LAUNCH IT YET (LOL!)"
+    run()
   else:
     echo "Wrong"
-    quit()
-theBigInstall()
+    main()
+main()

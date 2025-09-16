@@ -1,43 +1,42 @@
 #This handles the download of the modpack
 #Client is sync currently, I have vague understandings of what that means.
-#This is extreamly scuffed (LOL!)
+#This is somewhat less scuffed (HEHE!)
 
-import std/os
-import std/httpclient
-import globalValues
+#Standard Library
+import std/[os, httpclient]
+#Third Party
 import zippy/ziparchives
+#Local
+import globalValues
 
 proc downloaderClient()=
   setCurrentDir(mainDir)
-  createDir("Temp Downloads")
-  setCurrentDir("Temp Downloads")
+  createDir("tempDownloads")
+  setCurrentDir("tempDownloads")
   let client = newHttpClient()
-  downloadFile(client, modpackUrl, modpackName)
+  downloadFile(client, modpackUrl, modpackNameZip)
   httpclient.close(client)
+  echo "Finished Downloader!"
 
 proc unzipper() =
   setCurrentDir(mainDir)
-  createDir(modpackNameNoZip)
-  let dlPath = joinPath("Temp Downloads", modpackName)
-  extractAll(dlPath, "tempUnzip")
+  let dlPath = joinPath("tempDownloads", modpackNameZip)
+  extractAll(dlPath, "tempDownloads")
+  echo "Finished Unzipping!"
 
 proc installer() =
-  setCurrentDir(mainDir)
-  createDir("Modpacks//Infinite Hyperdeath 3")
-  let modpackDir = joinPath("tempUnzip", "Infinite Hyperdeath 3", "Infinite Hyperdeath 3")
-  let modpackInstall = joinPath("Modpacks", "Infinite Hyperdeath 3")
-  moveDir(modpackDir, modpackInstall)
+  createDir("Modpacks" / modpackName)
+  moveDir(modpackDlDir, modpackInstallDir)
 
-  setCurrentDir(minecraftDir)
-  createDir("versions//forge-47.4.0")
-  let forgeVer = joinPath(maindir, "tempUnzip", "Infinite Hyperdeath 3", "forge-47.4.0")
-  let forgeInstall = joinPath("versions", "forge-47.4.0")
-  moveDir(forgeVer, forgeInstall)
+  setCurrentDir(minecraftBin)
+  createDir("versions" / modpackFramework)
+  moveDir(frameworkDlDir, frameworkInstallDir)
+  echo "Finished install!"
 
 proc deletee() =
   setCurrentDir(mainDir)
-  removeDir("tempUnzip")
-  removeDir("Temp Downloads")
+  removeDir("tempDownloads")
+  echo "Finished cleanup!"
 
 proc modpackDownloader*() =
   downloaderClient()
