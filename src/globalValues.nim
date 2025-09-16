@@ -14,10 +14,10 @@ const mainDir* = joinPath(userLocalAppDir, mainDirName)
 const minecraftBin* = joinPath(userRoamAppDir, ".minecraft")
 
 #Modpack Specifc (These will be assigned elsewhere in the future)
-var modpackUrl* = "https://www.dropbox.com/scl/fi/onwi6ki68raf4j3ug7zom/Modpack.zip?rlkey=qnrkd649iuy9v5gcatmh5ub5y&st=5wtjiz50&dl=1"
-var modpackNameZip* = "modpack.zip" #standardize
+var modpackUrl* = "https://www.dropbox.com/scl/fi/qmb6mdbqd4scstktnj9h2/Modpack.zip?rlkey=32jszohogtyn86xuceyr585ui&st=bm7beeq7&dl=1"
+var modpackNameZip* = "Modpack.zip" #standardize
 var modpackName* = "Infinite Hyperdeath 3"
-var modpackFramework* = "forge-47.4.0"
+var modpackFramework* = "1.20.1-forge-47.4.0"
 
 #Modpack Dependent Specifics
 let tempZipPath* = joinPath("tempDownloads", "tempZip")
