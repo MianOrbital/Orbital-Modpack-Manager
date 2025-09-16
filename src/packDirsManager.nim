@@ -14,3 +14,4 @@ proc dirCreator() =
 
 proc packDirsManager*() =
   dirCreator()
+packDirsManager()
