@@ -1,7 +1,6 @@
 #Sic Semper Tyranus
 
 #Imports the other .nim files
-import globalValues
 import packDirsManager
 import modpackDownloader
 import jsonManager

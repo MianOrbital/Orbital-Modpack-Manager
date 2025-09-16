@@ -22,4 +22,3 @@ proc jsonEditor() =
 
 proc modpackJsonManager*() =
   jsonEditor()
-modpackJsonManager()

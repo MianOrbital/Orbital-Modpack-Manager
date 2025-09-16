@@ -43,4 +43,3 @@ proc modpackDownloader*() =
   unzipper()
   installer()
   deletee()
-modpackDownloader()
