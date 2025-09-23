@@ -9,8 +9,10 @@ import modpackDirManager
 import modpackDl
 import modpackInstaller
 import modpackUnzipper
+import userPrompt
 
 proc modpackMain*() =
+ userPrompt()
  modpackDl()
  modpackUnzipper()
  modpackInstaller()

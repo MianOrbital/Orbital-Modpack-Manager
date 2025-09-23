@@ -9,6 +9,7 @@ import std/[os, json]
 
 #Local
 import ../config/globalValues
+import userPrompt
 
 proc jsonManager*() =
   try:
@@ -22,7 +23,7 @@ proc jsonManager*() =
     "gamedir": secLvlStdLib.mainDir / "Modpacks" / topLvlModVars.modpackName,
     "name": topLvlModVars.modpackName,
     "lastVersionID": topLvlModVars.modpackFramework,
-    #"JavaArgs": userJavaArg,
+    "JavaArgs": localRamArg,
     "type": "custom"}
   launcherProfileNode["profiles"]["Infinite Hyperdeath 3"] =modpackNode #joins modpackNode to existing profile
   writeFile("launcher_profiles.json", pretty(launcherProfileNode)) #still "unsafe"

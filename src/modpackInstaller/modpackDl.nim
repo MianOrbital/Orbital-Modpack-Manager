@@ -15,20 +15,20 @@ proc modpackDl*()=
   setCurrentDir("tempDownloads")
 
   let client = newHttpClient()
-  echo "Starting modpack download"
+  echo "Starting Modpack Download!"
   try:
     let response = client.get(topLvlModVars.modpackUrl)
     let f = open(topLvlModVars.modpackNameZip, fmWrite)
     f.write(response.body)
     f.close()
-    echo "Downloaded modpack!"
+    echo "Downloaded Modpack!"
   except HttpRequestError as e:
-    echo "HTTP error: ", e.msg
+    echo "HTTP Error: ", e.msg
   except CatchableError as e:
-    echo "General error: ", e.msg
+    echo "General Error: ", e.msg
   finally:
     try:
       client.close()
     except Exception as e:
-      echo "Error closing client: ", e.msg
+      echo "Error Closing Client: ", e.msg
   echo "Finished Downloader!"

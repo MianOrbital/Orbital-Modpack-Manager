@@ -11,7 +11,7 @@ import std/os
 import ../config/globalValues
 
 proc modpackInstaller*() =
-  echo "Starting install"
+  echo "Starting Install!"
   createDir("Modpacks" / topLvlModVars.modpackName)
   moveDir(thrdLvlModVars.modpackDlDir, secLvlModVars.modpackInstallDir)
 

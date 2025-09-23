@@ -34,7 +34,7 @@ proc welcome() =
       echo("Error: ", getCurrentExceptionMsg())
   elif userIn == "Modpacks":
     try:
-      modpackMain()
+      userPrompt()
     except:
       echo("Error: ", getCurrentExceptionMsg())
   else:

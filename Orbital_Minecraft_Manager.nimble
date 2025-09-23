@@ -2,7 +2,7 @@
 
 version       = "0.3"
 author        = "MianOrbital"
-description   = "A simple modded minecraft installer. Mainly for use with Chief Packs"
+description   = "A simple modded minecraft manager. Mainly for use with Chief Packs"
 license       = "CC0-1.0"
 srcDir        = "src"
 bin           = @["Orbital_Minecraft_Manager"]
