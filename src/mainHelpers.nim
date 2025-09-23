@@ -8,7 +8,7 @@
 import config/globalValues
 import launcher/launcher
 import launcherInstaller/launcherInstaller
-import modpackInstaller/modpackMain
+import modpackInstaller/userPrompt
 
 #Startup CLI
 proc welcome() =

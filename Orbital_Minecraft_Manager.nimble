@@ -5,7 +5,7 @@ author        = "MianOrbital"
 description   = "A simple modded minecraft manager. Mainly for use with Chief Packs"
 license       = "CC0-1.0"
 srcDir        = "src"
-bin           = @["Orbital_Minecraft_Manager"]
+bin           = @["Main"]
 
 
 # Dependencies
