@@ -25,7 +25,7 @@
 <ul>
 <li>Version 0.1 - The Concept Edition - Released September of 2025 - Proof of concept, non functional</li>
 <li>Version 0.2 - The Functional Edition - Released September of 2025 - Functional but unfriendly</li>
-<li>Version 0.3 - The Usable Edition - Released XXX - Actually usable software</li>
+<li>Version 0.3 - The Usable Edition - Released September of 2025 - Actually usable software</li>
 <li>Version 0.4 - The Updated Edition- Modpack updates enabled</li>
 <li>Version 0.5 - The Standalone Edition - Ships Mojang assets via API </li>
 <li>Version 0.6 - The Automatic Edition - Automatic modpack importing and installing</li>
