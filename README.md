@@ -1,5 +1,5 @@
 <h3>Orbital Minecraft Manager</h3>
-<h5>Version 0.3 - The Usable Edition</h5>
+<h5>Version 0.4 - The Updated Edition</h5>
 <h5>Written by Mian using Nim in September of 2025</h5>
 <h5>Public domain under CC0 1.0</h5>
 
@@ -44,11 +44,3 @@
 </ul>
 
 <h4>Documentation</h4>
-<h5>Folders</h5>
-<p>This is overkill for now but future proofed a little. Each folder should be almost independent.</p>
-<ul>
-<li>Config - Just holds the config file that everything uses.</li>
-<li>Launcher - Just holds the framework for the eventual launcher caller</li>
-<li>Launcher Installer - Just the directory handeling</li>
-<li>Modpack Installer - Various modpack install procs split with modpackMain serving as a point of reference for the main proc.</li>
-</ul>
